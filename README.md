@@ -1,3 +1,18 @@
+# Notes from V
+This is a hard fork of PatienceOS, I will probably change its name in the future.
+Goal is to provide a self-contained build environment that can be used with Linux
+and maybe work under JetBrains Rider as a bonus.
+
+I've also took the liberty to re-license the project to GPLv3. Yay, copyleft!
+
+All binary tools under `tools/` are **not** covered by GPLv3 license and stored 
+in the repository solely for my own convenience. They remain covered by their
+respective licenses.
+
+And now onto the old README.md...
+
+---
+
 # PatienceOS
 A baremetal C# kernel - Frank Ray, [Better Software UK](https://bettersoftware.uk/).
 

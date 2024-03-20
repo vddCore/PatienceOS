@@ -1,0 +1,19 @@
+#!/bin/bash
+
+SCRIPT_PATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+export PATIENCE_ROOT=$(readlink -f $SCRIPT_PATH/..)
+export PATIENCE_TOOLS_ROOT=$PATIENCE_ROOT/tools
+export PATIENCE_BUILDSCRIPT_ROOT=$PATIENCE_ROOT/build
+
+echo "PatienceOS environment set-up script"
+echo "------------------------------------"
+echo
+echo "PatienceOS source root: $PATIENCE_ROOT"
+echo "PatienceOS tools root: $PATIENCE_TOOLS_ROOT"
+echo "PatienceOS build script root: $PATIENCE_BUILDSCRIPT_ROOT"
+echo
+
+export PATH=$PATIENCE_TOOLS_ROOT/bin:$PATIENCE_BUILDSCRIPT_ROOT/bin:$PATH
+
+echo "All done. Now enter 'patience-build' and cross your fingers..."

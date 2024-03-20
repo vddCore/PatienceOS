@@ -10,13 +10,14 @@
 
         private FrameBuffer frameBuffer;
 
-        private int pos = 0;
+        private int pos;
 
         public Console(int width, int height, FrameBuffer frameBuffer)
         {
             this.width = width;
             this.height = height;
             this.frameBuffer = frameBuffer;
+            this.pos = 0;
         }
 
         /// <summary>
