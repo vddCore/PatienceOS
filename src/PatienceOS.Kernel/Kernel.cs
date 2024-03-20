@@ -1,21 +1,16 @@
 using PatienceOS.Kernel;
 
-unsafe class Program
+internal unsafe class Program
 {
     private const int VideoBaseAddress = 0xb8000;
 
-    // Assumes VGA text mode 7 (80 x 25)
-    // ref: https://en.wikipedia.org/wiki/VGA_text_mode
-    private const int Width = 80;
-    private const int Height = 25;
-
-    static int Main()
+    internal static int Main()
     {
         // Reverse engineering natively-compiled .NET apps
         // https://migeel.sk/blog/2023/09/15/reverse-engineering-natively-compiled-dotnet-apps/
 
         var frameBuffer = new FrameBuffer((byte*)VideoBaseAddress);
-        var console = new Console(Width, Height, frameBuffer);
+        var console = new Console(ConsoleMode.VGA_80x25, frameBuffer);
 
 
         console.Clear();

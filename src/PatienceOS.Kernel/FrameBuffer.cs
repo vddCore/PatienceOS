@@ -1,25 +1,22 @@
 ﻿namespace PatienceOS.Kernel
 {
-    /// <summary>
-    /// A linear framebuffer of bytes
-    /// </summary>
-    unsafe public struct FrameBuffer
+    public unsafe struct FrameBuffer
     {
-        private byte* buffer;
+        private byte* _memory;
 
-        public FrameBuffer(byte* buffer)
+        public FrameBuffer(byte* memory)
         {
-            this.buffer = buffer;
+            _memory = memory;
         }
 
         public byte Fetch(int position)
         {
-            return buffer[position];
+            return _memory[position];
         }
 
         public void Write(int position, byte value)
         {
-            buffer[position] = value;
+            _memory[position] = value;
         }
     }
 }
