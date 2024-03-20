@@ -9,6 +9,9 @@ All binary tools under `tools/` are **not** covered by GPLv3 license and stored
 in the repository solely for my own convenience. They remain covered by their
 respective licenses.
 
+To set up your TTY for building, simply run `source build/env` and then `patience-build`
+like you would your regular commands.
+
 And now onto the old README.md...
 
 ---
